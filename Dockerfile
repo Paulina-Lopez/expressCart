@@ -1,8 +1,6 @@
-FROM mhart/alpine-node:8
+FROM node:14
 
-ENV NODE_VERSION 8.9.4
-
-RUN apk add --no-cache make gcc g++ python bash
+RUN apt-get update; apt-get install -y make gcc g++ python bash
 
 WORKDIR /var/expressCart
 
